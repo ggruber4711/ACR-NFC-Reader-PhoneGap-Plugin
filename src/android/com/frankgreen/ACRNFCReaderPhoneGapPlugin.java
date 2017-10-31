@@ -112,19 +112,19 @@ public class ACRNFCReaderPhoneGapPlugin extends CordovaPlugin {
         this.pluginActivity = cordova.getActivity();
 
         Log.d(TAG, "initializing...");
-        if (pluginActivity.getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
-            mBluetoothManager = (BluetoothManager) pluginActivity.getSystemService(Context.BLUETOOTH_SERVICE);
-            mBluetoothAdapter = mBluetoothManager.getAdapter();
-            if (mBluetoothAdapter == null || !mBluetoothAdapter.isEnabled()) {
-                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                cordova.getActivity().startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-            }
-            useBluetoothReader(cordova, webView);
+        // if (pluginActivity.getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
+        //     mBluetoothManager = (BluetoothManager) pluginActivity.getSystemService(Context.BLUETOOTH_SERVICE);
+        //     mBluetoothAdapter = mBluetoothManager.getAdapter();
+        //     if (mBluetoothAdapter == null || !mBluetoothAdapter.isEnabled()) {
+        //         Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+        //         cordova.getActivity().startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+        //     }
+        //     useBluetoothReader(cordova, webView);
 
-        } else {
+        // } else {
             isSupportedBlueTooth = false;
             useUsbReader(cordova, webView);
-        }
+        // }
 
     }
 
