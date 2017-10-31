@@ -1,0 +1,12 @@
+{
+  "name": "ACR-NFC-Reader-PhoneGap-Plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Quander/ACR-NFC-Reader-PhoneGap-Plugin.git",
+  "author": "Gavin Williams <gav@quander.io>",
+  "license": "MIT",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+	]
+}
